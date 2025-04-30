@@ -36,8 +36,8 @@ public class DBUtilityClass {
     @BeforeTest
     public void DBbrowserLaunch() {
 
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.get("https://www.demoblaze.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
